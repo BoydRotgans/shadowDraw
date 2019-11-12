@@ -70,6 +70,9 @@ dependencies {
 
     compile("io.github.microutils", "kotlin-logging","1.7.2")
 
+    compile("com.google.code.gson:gson:2.8.5")
+
+
     if (!applicationFullLogging) {
         runtime("org.slf4j","slf4j-nop","1.7.25")
     } else {
