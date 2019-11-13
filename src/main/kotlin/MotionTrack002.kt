@@ -17,6 +17,7 @@ fun main() = application {
         height = 720
     }
 
+
     val gson = Gson()
     val jsonString = File("data/data/data-n.json").readText()
     val newList = gson.fromJson(jsonString, FrameRect::class.java)
@@ -24,6 +25,9 @@ fun main() = application {
     var cbContourList = mutableListOf<ColorBuffer>()
     var cbVideoList = mutableListOf<ColorBuffer>()
     var cbSourceList = mutableListOf<ColorBuffer>()
+
+
+
 
     class Contour : Filter(filterShaderFromUrl(resourceUrl("/shaders/contour.frag"))) {
         var resolution: Vector2 by parameters
@@ -36,6 +40,7 @@ fun main() = application {
     }
 
     program {
+
 
 //        extend(ScreenRecorder().apply {
 //            contentScale = 1.0
