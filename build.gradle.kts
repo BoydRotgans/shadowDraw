@@ -35,14 +35,14 @@ val orxVersion = if (orxUseSnapshot) "0.4.0-SNAPSHOT" else "0.3.36"
 // orx-integral-image, orx-interval-tree, orx-jumpflood,orx-kdtree, orx-mesh-generators,orx-midi, orx-no-clear,
 // orx-noise, orx-obj, orx-olive
 
-val orxFeatures = setOf("orx-noise")
+val orxFeatures = setOf("orx-noise", "orx-video-profiles")
 
 repositories {
     mavenCentral()
     if (openrndrUseSnapshot || orxUseSnapshot || panelUseSnapshot) {
         mavenLocal()
     }
-    maven(url = "https://dl.bintray.com/openrndr/openrndr")
+    maven(url = "https://maven.openrndr.org")
 }
 
 fun DependencyHandler.orx(module: String): Any {
